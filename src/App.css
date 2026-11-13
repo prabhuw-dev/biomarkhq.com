@@ -49,8 +49,9 @@
   gap: 10px;
   max-width: 480px;
 }
-.waitlist-form--center {
-  margin: 0 auto;
+.waitlist--center {
+  margin-left: auto;
+  margin-right: auto;
 }
 .waitlist-note {
   font-size: 14px;
@@ -68,6 +69,27 @@
 }
 .field[aria-invalid='true'] {
   border-color: var(--alert);
+}
+.waitlist-form .btn:disabled {
+  cursor: progress;
+  opacity: 0.75;
+}
+.waitlist-success {
+  max-width: 480px;
+  padding: 14px 22px;
+  border-radius: 18px;
+  border: 1px solid var(--border-soft);
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 15px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+.waitlist-success:focus {
+  outline: none;
+}
+.waitlist-success strong {
+  color: var(--accent);
 }
 
 /* ---------- Hero ---------- */

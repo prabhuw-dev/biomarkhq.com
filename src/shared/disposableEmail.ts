@@ -3,8 +3,8 @@
  * Free personal webmail (Gmail, Outlook, iCloud…) is deliberately allowed.
  *
  * This is a hand-picked list of the most common services, not an exhaustive one.
- * New throwaway domains appear constantly, so the server should run the same
- * check against a maintained list when the waitlist endpoint exists.
+ * It runs in the browser for instant feedback and again in the /api/waitlist
+ * Pages Function, which can't be bypassed. Add new throwaway domains here.
  */
 export const DISPOSABLE_EMAIL_DOMAINS = [
   // Mailinator and its alias domains

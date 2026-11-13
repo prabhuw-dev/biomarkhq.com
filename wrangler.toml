@@ -1,0 +1,20 @@
+# Cloudflare Pages config. Once this file exists, Pages reads bindings from here
+# instead of the dashboard. `name` must match the Pages project name.
+name = "biomarkhq"
+pages_build_output_dir = "./dist"
+compatibility_date = "2026-10-28"
+
+[vars]
+# Sender for waitlist confirmations. The domain must be verified in Resend.
+WAITLIST_FROM = "BiomarkHQ <waitlist@biomarkhq.com>"
+
+# Create with `npx wrangler d1 create biomarkhq-waitlist` and paste the id below.
+[[d1_databases]]
+binding = "DB"
+database_name = "biomarkhq-waitlist"
+database_id = "15df6154-6dda-4881-bae1-a2012d529482"
+migrations_dir = "migrations"
+
+# RESEND_API_KEY is a secret: set it in the Pages dashboard (Settings → Variables
+# and Secrets) or with `npx wrangler pages secret put RESEND_API_KEY`. For local
+# dev, put it in .dev.vars (see .dev.vars.example).
