@@ -25,7 +25,7 @@ export function PlansAndRetesting() {
               training and lifestyle, so you know what to do next.
             </p>
           </div>
-          <ul className="plan-list" style={{ listStyle: 'none', padding: 0, margin: 0 }} aria-label="Sample action plan">
+          <ul className="plan-list" style={{ listStyle: 'none', padding: 0, margin: 0 }} aria-label="Action plan">
             {PLAN.map((item) => (
               <li key={item.key} className="plan-item">
                 <span className={item.done ? 'plan-item__check plan-item__check--done' : 'plan-item__check'}>

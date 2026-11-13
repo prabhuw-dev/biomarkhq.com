@@ -79,7 +79,7 @@ export function Insights() {
               </div>
             </div>
           ))}
-          <p className="label">Illustrative examples</p>
+          <p className="label"></p>
         </div>
       </div>
     </section>

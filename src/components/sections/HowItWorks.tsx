@@ -98,7 +98,7 @@ function OneViewVisual() {
     <div className="week-card">
       <div className="week-card__head">
         <span className="week-card__title">Your week</span>
-        <span className="mono week-card__tag">Sample data</span>
+        <span className="mono week-card__tag">9/06 - 16/06</span>
       </div>
       <div className="week-row">
         <span className="week-row__name">Ferritin</span>
@@ -135,7 +135,7 @@ function ProtocolVisual() {
       <div className="glass protocol-card">
         <span className="protocol-card__head">
           <span className="protocol-card__title">Your protocol</span>
-          <span className="mono protocol-card__tag">Sample</span>
+          <span className="mono protocol-card__tag">Daily</span>
         </span>
         {PROTOCOL.map(([key, text]) => (
           <span key={key} className="protocol-card__row">

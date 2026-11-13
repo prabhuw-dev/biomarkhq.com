@@ -81,7 +81,7 @@ export function Trends() {
             className="chart trend-chart"
             viewBox="0 0 1060 240"
             role="img"
-            aria-label="Animated sample chart: vitamin D rising from 18 to 41 ng/mL across six tests between 2022 and 2026, each test highlighted in turn"
+            aria-label="Vitamin D rising from 18 to 41 ng/mL across six tests between 2022 and 2026, each test highlighted in turn"
           >
             <rect x="50" y="20" width="990" height="150" fill="var(--range-lab)" />
             <rect x="50" y="60" width="990" height="56" fill="var(--range-optimal)" />
@@ -148,7 +148,7 @@ export function Trends() {
           </svg>
         </div>
 
-        <p className="label trend-foot">Sample data · Your results, kept for life, in one place</p>
+        <p className="label trend-foot">Your results, kept for life, in one place</p>
       </div>
     </section>
   )

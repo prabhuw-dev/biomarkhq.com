@@ -89,6 +89,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
+  justify-content: space-between;
   gap: 40px;
 }
 .hero__copy {
@@ -115,9 +116,6 @@
   flex: 0 1 380px;
   min-width: 0;
   margin-left: auto;
-}
-.hero__spacer {
-  flex: 0 1 200px;
 }
 .hero-card {
   border-radius: 18px;
@@ -173,9 +171,6 @@
 }
 
 @media (max-width: 900px) {
-  .hero__spacer {
-    display: none;
-  }
   .hero__wash {
     background: linear-gradient(
       180deg,

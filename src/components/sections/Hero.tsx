@@ -17,7 +17,7 @@ function FerritinCard() {
         <div>
           <h3 className="card-title">Ferritin</h3>
           <p className="label" style={{ letterSpacing: '1.2px', marginTop: 4 }}>
-            4 results · 2 years · Sample data
+            4 results · 2 years
           </p>
         </div>
         <div style={{ textAlign: 'right' }}>
@@ -34,7 +34,7 @@ function FerritinCard() {
         className="chart"
         viewBox="0 0 520 190"
         role="img"
-        aria-label="Sample chart: ferritin falling over four tests from 62 to 18 ng/mL"
+        aria-label="Ferritin falling over four tests from 62 to 18 ng/mL"
       >
         <rect x="40" y="10" width="470" height="92" fill="var(--range-lab)" />
         <rect x="40" y="10" width="470" height="60" fill="var(--range-optimal)" />
@@ -98,7 +98,6 @@ export function Hero() {
         <div className="hero__card-wrap">
           <FerritinCard />
         </div>
-        <div className="hero__spacer" aria-hidden="true" />
       </div>
     </section>
   )

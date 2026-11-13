@@ -118,7 +118,7 @@ export function Dashboard() {
               <MarkerRow key={m.name} m={m} />
             ))}
             <div className="marker-table__foot">
-              <span className="label">Sample data · 4 of 112 markers</span>
+              <span className="label">4 of 112 markers</span>
               <span className="marker-table__more">View all →</span>
             </div>
           </div>
