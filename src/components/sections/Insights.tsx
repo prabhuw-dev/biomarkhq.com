@@ -79,7 +79,6 @@ export function Insights() {
               </div>
             </div>
           ))}
-          <p className="label"></p>
         </div>
       </div>
     </section>
