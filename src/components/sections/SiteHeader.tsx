@@ -1,12 +1,11 @@
-import { BrandMark } from '../BrandMark'
+import { BrandLockup } from '../BrandMark'
 
 export function SiteHeader() {
   return (
     <header className="site-header">
       <div className="container site-header__inner">
         <a href="#top" className="brand">
-          <BrandMark />
-          BiomarkHQ
+          <BrandLockup />
         </a>
         <nav className="nav-links" aria-label="Primary">
           <a href="#how">How it works</a>

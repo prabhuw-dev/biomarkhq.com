@@ -106,7 +106,9 @@ export function AskBiomarkHQ() {
             )}
             {phase >= 2 && (
               <div key={`a${convo}`} className="bub bubble-ai">
-                <BrandMark size="lg" />
+                <span className="brand-avatar">
+                  <BrandMark />
+                </span>
                 <div className="bubble-ai__body">
                   {phase === 2 ? (
                     <span className="dots" aria-label="BiomarkHQ is typing">
