@@ -1,0 +1,3 @@
+# Copy to .dev.vars for `npm run dev:pages`. Never commit .dev.vars.
+# Leave empty to skip sending confirmation emails locally.
+RESEND_API_KEY=
