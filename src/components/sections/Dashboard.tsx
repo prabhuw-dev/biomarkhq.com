@@ -66,7 +66,7 @@ const MARKERS: Marker[] = [
 function MarkerRow({ m }: { m: Marker }) {
   return (
     <div className="mrow">
-      <div style={{ minWidth: 0 }}>
+      <div className="mrow__id">
         <p className="mrow__name">{m.name}</p>
         <p className="label mrow__group">{m.group}</p>
       </div>
@@ -109,8 +109,8 @@ export function Dashboard() {
         <div className="col-vis">
           <div className="marker-table">
             <div className="mrow mrow--head">
-              <span>Marker</span>
-              <span>Latest</span>
+              <span className="mrow__id">Marker</span>
+              <span className="mrow__value">Latest</span>
               <span className="mrow__range">Range</span>
               <span className="mrow__status">Status</span>
             </div>

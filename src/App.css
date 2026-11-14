@@ -15,6 +15,18 @@
   justify-content: space-between;
   gap: 18px;
 }
+/* Small phones (iPhone SE and narrower): keep the logo and button on one line. */
+@media (max-width: 360px) {
+  .site-header__inner {
+    gap: 12px;
+  }
+  .site-header .lockup {
+    --m: 24px; /* the design system's smallest lockup */
+  }
+  .site-header .btn--sm {
+    padding: 0 12px;
+  }
+}
 .brand {
   display: inline-flex;
   align-items: center;
@@ -528,6 +540,9 @@
   text-transform: uppercase;
   color: var(--muted);
 }
+.mrow__id {
+  min-width: 0;
+}
 .mrow__name {
   font-weight: 700;
   font-size: 15px;
@@ -588,14 +603,34 @@
   .nav-links {
     display: none;
   }
+  /* Phones: name and value on top, the range strip and status underneath. */
   .mrow {
-    grid-template-columns: minmax(0, 1fr) 90px;
+    /* Fixed second column so every row's range strip is the same width. */
+    grid-template-columns: minmax(0, 1fr) 112px;
+    grid-template-areas:
+      'id value'
+      'range status';
+    gap: 12px 16px;
+  }
+  .mrow__id {
+    grid-area: id;
+  }
+  .mrow__value {
+    grid-area: value;
+    text-align: right;
   }
   .mrow__range {
-    display: none;
+    grid-area: range;
   }
   .mrow__status {
-    grid-column: 2;
+    grid-area: status;
+  }
+  .mrow--head {
+    grid-template-areas: 'id value';
+  }
+  .mrow--head .mrow__range,
+  .mrow--head .mrow__status {
+    display: none;
   }
 }
 
@@ -637,9 +672,6 @@
   border-radius: 3px;
   display: block;
 }
-.trend-scroll {
-  overflow-x: auto;
-}
 .trend-readout {
   display: flex;
   align-items: center;
@@ -670,8 +702,16 @@
     color 0.35s,
     border-color 0.35s;
 }
-.trend-chart {
-  min-width: 560px;
+@media (max-width: 560px) {
+  .panel {
+    padding: 22px 18px;
+  }
+  .trend-readout {
+    gap: 10px 16px;
+  }
+  .trend-readout__year {
+    min-width: 0;
+  }
 }
 .trend-foot {
   margin-top: 16px;
