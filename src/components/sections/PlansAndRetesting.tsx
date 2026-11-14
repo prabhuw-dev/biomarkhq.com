@@ -37,8 +37,10 @@ export function PlansAndRetesting() {
                   <span className="sr-only">{item.done ? 'Done' : 'To do'}</span>
                 </span>
                 <img className="plan-item__thumb" src={item.img} alt={item.alt} loading="lazy" />
-                <span className="label plan-item__key">{item.key}</span>
-                <span className="plan-item__text">{item.text}</span>
+                <span className="plan-item__body">
+                  <span className="label plan-item__key">{item.key}</span>
+                  <span className="plan-item__text">{item.text}</span>
+                </span>
               </li>
             ))}
           </ul>
