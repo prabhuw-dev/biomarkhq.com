@@ -151,12 +151,12 @@ export function HowItWorks() {
     <section id="how" className="how">
       <div className="container how__inner">
         <div className="section-intro">
-          <p className="eyebrow">How it works</p>
+          <p className="eyebrow">HOW IT WORKS</p>
           <h2 className="section-title">
             Everything your body tells you, <em>in one place.</em>
           </h2>
           <p className="section-lede">
-            Your lab reports live in one inbox, your sleep in another app, your runs somewhere else. BiomarkHQ gathers
+            Your lab reports live in one inbox, your sleep in another app, your runs somewhere else. Biomarkhq gathers
             them so you finally see the full picture.
           </p>
         </div>
@@ -184,7 +184,7 @@ export function HowItWorks() {
           <Step
             n={4}
             title="Get your protocol"
-            body="BiomarkHQ builds a personalised protocol from your data, with practical steps across nutrition, sleep, training and lifestyle."
+            body="Biomarkhq builds a personalised protocol from your data, with practical steps across nutrition, sleep, training and lifestyle."
             visual={<ProtocolVisual />}
           />
         </div>

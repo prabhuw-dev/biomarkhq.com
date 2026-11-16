@@ -120,7 +120,7 @@ export function Trends() {
           See how your body changes, <em>year after year.</em>
         </h2>
         <p className="section-lede">
-          A single test is a snapshot. BiomarkHQ keeps every result in one timeline, so you can spot slow shifts early
+          A single test is a snapshot. Biomarkhq keeps every result in one timeline, so you can spot slow shifts early
           and see whether the changes you've made are working.
         </p>
       </div>
@@ -132,7 +132,6 @@ export function Trends() {
 
         <div className="trend-body">
           <div className="trend-readout" aria-live="polite">
-            <span className="mono trend-readout__year">{active.label}</span>
             <span className="mono trend-readout__value">
               {active.v}
               <span className="unit">{'\u202F'}ng/mL</span>
@@ -255,7 +254,7 @@ export function Trends() {
           </div>
         </div>
 
-        <p className="label trend-foot">Your results, kept for life, in one place</p>
+        <p className="label trend-foot">YOUR RESULTS, KEPT FOR LIFE, IN ONE PLACE.</p>
       </div>
     </section>
   )

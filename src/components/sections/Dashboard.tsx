@@ -87,7 +87,7 @@ export function Dashboard() {
     <section id="features" className="container feature-section feature-section--first">
       <div className="row">
         <div className="col-text">
-          <p className="eyebrow">Biomarker dashboard</p>
+          <p className="eyebrow">BIOMARKER DASHBOARD</p>
           <h2 className="section-title">
             100+ biomarkers. <em>One clear view.</em>
           </h2>
@@ -103,16 +103,16 @@ export function Dashboard() {
         <div className="col-vis">
           <div className="marker-table">
             <div className="mrow mrow--head">
-              <span className="mrow__id">Marker</span>
-              <span className="mrow__value">Latest</span>
-              <span className="mrow__range">Range</span>
-              <span className="mrow__status">Status</span>
+              <span className="mrow__id">MARKER</span>
+              <span className="mrow__value">LATEST</span>
+              <span className="mrow__range">RANGE</span>
+              <span className="mrow__status">STATUS</span>
             </div>
             {MARKERS.map((m) => (
               <MarkerRow key={m.name} m={m} />
             ))}
             <div className="marker-table__foot">
-              <span className="label">4 of 112 markers</span>
+              <span className="label">4 OF 112 MARKERS</span>
               <span className="marker-table__more">View all →</span>
             </div>
           </div>

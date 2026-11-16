@@ -13,7 +13,7 @@ function Icon({ color, children }: { color: string; children: ReactNode }) {
 
 const INSIGHTS: Insight[] = [
   {
-    kicker: 'Blood + training',
+    kicker: 'BLOOD + TRAINING',
     text: 'Your ferritin has dipped across your last two tests, during your highest training months.',
     tint: 'rgba(138,90,16,.12)',
     icon: (
@@ -24,7 +24,7 @@ const INSIGHTS: Insight[] = [
     ),
   },
   {
-    kicker: 'Sleep + heart',
+    kicker: 'SLEEP + HEART',
     text: 'Your resting heart rate improves in weeks you sleep 7+ hours.',
     tint: 'rgba(189,90,56,.10)',
     icon: (
@@ -34,7 +34,7 @@ const INSIGHTS: Insight[] = [
     ),
   },
   {
-    kicker: 'Trend',
+    kicker: 'TREND',
     text: 'Your vitamin D is trending up since your last test.',
     tint: 'rgba(60,48,36,.08)',
     icon: (
@@ -51,12 +51,12 @@ export function Insights() {
     <section className="container feature-section">
       <div className="row" style={{ alignItems: 'flex-start' }}>
         <div className="col-text">
-          <p className="eyebrow">Personalised insights</p>
+          <p className="eyebrow">PERSONALISED INSIGHTS</p>
           <h2 className="section-title">
             Insights that see <em>the whole you,</em> not just the numbers.
           </h2>
           <p className="section-lede feature-lede">
-            BiomarkHQ's AI reads your biomarkers alongside your sleep, recovery and training, then explains what the
+            Biomarkhq's AI reads your biomarkers alongside your sleep, recovery and training, then explains what the
             patterns mean for you, in plain language.
           </p>
           <img

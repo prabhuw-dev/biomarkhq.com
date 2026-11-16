@@ -16,12 +16,12 @@ export function PlansAndRetesting() {
       <div className="duo">
         <div className="duo-card duo-card--light">
           <div>
-            <p className="eyebrow">Action plans</p>
+            <p className="eyebrow">ACTION PLANS</p>
             <h2 className="duo-card__title">
               From insight to <em>a plan you can follow.</em>
             </h2>
             <p className="duo-card__body">
-              Knowing isn't enough. BiomarkHQ turns your insights into simple, practical steps across nutrition, sleep,
+              Knowing isn't enough. Biomarkhq turns your insights into simple, practical steps across nutrition, sleep,
               training and lifestyle, so you know what to do next.
             </p>
           </div>
@@ -53,12 +53,12 @@ export function PlansAndRetesting() {
 
         <div className="duo-card duo-card--dark">
           <div>
-            <p className="eyebrow">Retesting reminders</p>
+            <p className="eyebrow">RETESTING REMINDERS</p>
             <h2 className="duo-card__title">
               Know when to <em>test again.</em>
             </h2>
             <p className="duo-card__body">
-              BiomarkHQ reminds you when it's time to retest, so you can see whether your changes are working and never
+              Biomarkhq reminds you when it's time to retest, so you can see whether your changes are working and never
               lose track of a marker that needs watching.
             </p>
           </div>

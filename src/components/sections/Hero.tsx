@@ -51,7 +51,7 @@ function FerritinCard() {
         <div>
           <h3 className="card-title">Ferritin</h3>
           <p className="label" style={{ letterSpacing: '1.2px', marginTop: 4 }}>
-            3 results · 8 months
+            3 RESULTS · 8 MONTHS
           </p>
         </div>
         <div style={{ textAlign: 'right' }}>
@@ -130,9 +130,9 @@ function FerritinCard() {
       </div>
 
       <div className="hero-card__chips">
-        <span className="chip">Blood results</span>
-        <span className="chip">Sleep avg · 6.4 h</span>
-        <span className="chip">Training load ↑ 32%</span>
+        <span className="chip">BLOOD RESULTS</span>
+        <span className="chip">SLEEP AVG· 6.4h</span>
+        <span className="chip">TRAINING LOAD ↑ 32%</span>
       </div>
     </div>
   )
@@ -150,12 +150,12 @@ export function Hero() {
       <div className="hero__wash" aria-hidden="true" />
       <div className="container hero__inner">
         <div className="hero__copy">
-          <p className="eyebrow">Early access opening soon</p>
+          <p className="eyebrow">EARLY ACCESS OPENING SOON</p>
           <h1 className="hero__title">
             Your health, read as <em>one story.</em>
           </h1>
           <p className="hero__lede">
-            BiomarkHQ brings your blood results, wearable data and training together, tracks 100+ biomarkers over
+            Biomarkhq brings your blood results, wearable data and training together, tracks 100+ biomarkers over
             time, and tells you what actually matters.
           </p>
           <WaitlistForm note="Early access is opening soon." />
