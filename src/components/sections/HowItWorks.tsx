@@ -2,6 +2,7 @@ import type { ReactNode } from 'react'
 import uploadImg from '../../assets/images/step-upload.jpg'
 import syncImg from '../../assets/images/step-sync.jpg'
 import protocolImg from '../../assets/images/step-protocol.jpg'
+import { RangeStrip } from '../RangeStrip'
 
 type StepProps = {
   n: number
@@ -102,10 +103,7 @@ function OneViewVisual() {
       </div>
       <div className="week-row">
         <span className="week-row__name">Ferritin</span>
-        <span className="track">
-          <span className="track__band" style={{ left: '17%', right: '50%', background: 'rgba(189,90,56,.24)' }} />
-          <span className="track__tick" style={{ left: '5%', background: 'var(--alert)' }} />
-        </span>
+        <RangeStrip optimal={[17, 50]} position={5} status="alert" />
         <span className="mono week-row__value">18 ng/mL</span>
       </div>
       <div className="week-row">

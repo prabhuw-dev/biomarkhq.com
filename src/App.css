@@ -183,10 +183,12 @@
   line-height: 1;
   letter-spacing: -0.02em;
 }
+/* Units follow standard symbols (ng/mL, mg/dL, %) and are never uppercased.
+   The markup puts a narrow no-break space before each unit, as SI asks. */
 .unit {
   color: var(--muted);
-  margin-left: 5px;
   font-size: 14px;
+  text-transform: none;
 }
 .hero-card__chips {
   display: flex;
@@ -200,7 +202,6 @@
   font-family: var(--mono);
   font-size: 11px;
   letter-spacing: 0.8px;
-  text-transform: uppercase;
   color: var(--ink);
   background: var(--sand);
   padding: 7px 12px;
@@ -401,7 +402,6 @@
 .week-card__tag {
   font-size: clamp(9px, 1.7cqw, 11px);
   letter-spacing: 1px;
-  text-transform: uppercase;
   color: var(--muted);
 }
 .week-row {
@@ -452,7 +452,6 @@
 .protocol-card__tag {
   font-size: clamp(8px, 1.6cqw, 10.5px);
   letter-spacing: 0.8px;
-  text-transform: uppercase;
   color: var(--muted);
 }
 .protocol-card__row {
@@ -467,35 +466,42 @@
   flex: none;
   font-size: clamp(8px, 1.5cqw, 10px);
   letter-spacing: 0.8px;
-  text-transform: uppercase;
   color: var(--muted);
 }
 
-/* ---------- Range bars (shared) ---------- */
-.track {
+/* ---------- Range strip (shared, design system v1.3) ---------- */
+/* Three levels measured against the optimal range: oxblood below, sage
+   optimal, ochre above. Only the marker changes colour with status. */
+.strip {
+  --opt-a: 35%;
+  --opt-b: 65%;
   position: relative;
-  height: 8px;
-  border-radius: 4px;
-  background: var(--sand-2);
-  overflow: hidden;
   display: block;
+  height: 22px;
+  min-width: 0;
 }
-.track__band {
+.strip__track {
   position: absolute;
-  top: 0;
-  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 8.2px;
+  height: 5.6px;
+  border-radius: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--level-below) 0 var(--opt-a),
+    var(--level-optimal) var(--opt-a) var(--opt-b),
+    var(--level-above) var(--opt-b) 100%
+  );
 }
-.track__band--lab {
-  background: rgba(60, 48, 36, 0.08);
-}
-.track__band--optimal {
-  background: rgba(189, 90, 56, 0.2);
-}
-.track__tick {
+.strip__marker {
   position: absolute;
-  top: 0;
-  bottom: 0;
+  top: 1px;
   width: 3px;
+  height: 20px;
+  margin-left: -1.5px;
+  border-radius: 2px;
+  box-shadow: 0 0 0 2.5px var(--surface);
 }
 
 /* ---------- Dashboard ---------- */
@@ -537,7 +543,6 @@
   font-family: var(--mono);
   font-size: 10px;
   letter-spacing: 1.3px;
-  text-transform: uppercase;
   color: var(--muted);
 }
 .mrow__id {
@@ -558,28 +563,9 @@
 }
 .mrow__value .unit {
   font-size: 11px;
-  margin-left: 3px;
 }
 .mrow__range {
-  position: relative;
-  height: 22px;
-}
-.mrow--head .mrow__range {
-  height: auto;
-}
-.mrow__range .track {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 7px;
-}
-.mrow__marker {
-  position: absolute;
-  top: 1px;
-  width: 3px;
-  height: 20px;
-  border-radius: 2px;
-  box-shadow: 0 0 0 2.5px var(--surface);
+  min-width: 0;
 }
 .mrow__status {
   display: flex;
@@ -603,35 +589,52 @@
   .nav-links {
     display: none;
   }
-  /* Phones: name and value on top, the range strip and status underneath. */
+  /* Phones (design system v1.3): each row folds onto two lines — name and
+     status on top, value and range strip beneath — so the strip is never lost. */
+  .mrow--head {
+    display: none;
+  }
   .mrow {
-    /* Fixed second column so every row's range strip is the same width. */
-    grid-template-columns: minmax(0, 1fr) 112px;
+    grid-template-columns: 96px minmax(0, 1fr) auto;
     grid-template-areas:
-      'id value'
-      'range status';
-    gap: 12px 16px;
+      'id id status'
+      'value range range';
+    gap: 10px 16px;
   }
   .mrow__id {
     grid-area: id;
   }
   .mrow__value {
     grid-area: value;
-    text-align: right;
   }
   .mrow__range {
     grid-area: range;
   }
   .mrow__status {
     grid-area: status;
+    align-self: start;
   }
-  .mrow--head {
-    grid-template-areas: 'id value';
-  }
-  .mrow--head .mrow__range,
-  .mrow--head .mrow__status {
-    display: none;
-  }
+}
+
+/* ---------- Chart level legend (narrow charts) ---------- */
+.level-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  margin-bottom: 10px;
+}
+.level-legend__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+.level-legend__edge {
+  width: 4px;
+  height: 12px;
+  flex: none;
 }
 
 /* ---------- Trends ---------- */
@@ -683,7 +686,6 @@
 .trend-readout__year {
   font-size: 12px;
   letter-spacing: 1.4px;
-  text-transform: uppercase;
   color: var(--muted);
   min-width: 96px;
 }
