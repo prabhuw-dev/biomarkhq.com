@@ -74,7 +74,7 @@ async function sendConfirmation(env: Env, email: string): Promise<void> {
       body: JSON.stringify({
         from: env.WAITLIST_FROM,
         to: [email],
-        subject: "You're on the BiomarkHQ waitlist",
+        subject: "You're on the biomarkhq waitlist",
         text: CONFIRMATION_TEXT,
         html: CONFIRMATION_HTML,
       }),
@@ -93,13 +93,13 @@ async function sendConfirmation(env: Env, email: string): Promise<void> {
   }
 }
 
-const CONFIRMATION_TEXT = `Thanks for joining the BiomarkHQ waitlist.
+const CONFIRMATION_TEXT = `Thanks for joining the biomarkhq waitlist.
 
 We're building a way to read all your blood work as one story: every marker, every trend, and a plan you can act on.
 
 We'll email you when your spot opens up. Until then, there's nothing else you need to do.
 
-— The BiomarkHQ team
+— The biomarkhq team
 
 You're receiving this because this address was entered on biomarkhq.com. If that wasn't you, ignore this email and you won't hear from us again.`
 
@@ -107,11 +107,11 @@ const CONFIRMATION_HTML = `<!doctype html>
 <html>
   <body style="margin:0;padding:32px 16px;background:#faf4e8;font-family:Helvetica,Arial,sans-serif;color:#453d33;">
     <div style="max-width:520px;margin:0 auto;background:#fefaf0;border:1px solid #e7ddc9;border-radius:16px;padding:32px;">
-      <p style="margin:0 0 20px;font-size:18px;font-weight:700;">BiomarkHQ</p>
+      <p style="margin:0 0 20px;font-size:18px;font-weight:700;">Biomarkhq</p>
       <h1 style="margin:0 0 16px;font-family:Georgia,serif;font-weight:400;font-size:28px;line-height:1.2;">You're on the list.</h1>
-      <p style="margin:0 0 14px;font-size:16px;line-height:1.6;">Thanks for joining the BiomarkHQ waitlist. We're building a way to read all your blood work as one story: every marker, every trend, and a plan you can act on.</p>
+      <p style="margin:0 0 14px;font-size:16px;line-height:1.6;">Thanks for joining the biomarkhq waitlist. We're building a way to read all your blood work as one story: every marker, every trend, and a plan you can act on.</p>
       <p style="margin:0 0 24px;font-size:16px;line-height:1.6;">We'll email you when your spot opens up. Until then, there's nothing else you need to do.</p>
-      <p style="margin:0;font-size:16px;">— The BiomarkHQ team</p>
+      <p style="margin:0;font-size:16px;">— The biomarkhq team</p>
     </div>
     <p style="max-width:520px;margin:16px auto 0;font-size:12px;line-height:1.5;color:#6f665a;text-align:center;">You're receiving this because this address was entered on biomarkhq.com. If that wasn't you, ignore this email and you won't hear from us again.</p>
   </body>

@@ -17,6 +17,7 @@
   --ink: #453d33;
   --ink-2: #5a5247;
   --muted: #6f665a;
+  --dim: #a89e8c; /* axis ticks, chart units: under 4.5:1, never for anything a reader must catch */
   --on-dark: #faf4e8;
   --on-dark-muted: #d9cfbd;
   --on-accent: #fdf9ee;
@@ -26,12 +27,19 @@
   --accent-hover: #9a4226;
   --accent-em: #bd5a38;
   --accent-light: #ef9d62;
-  --alert: #8c1f2e;
-  --warn: #8a5a10;
 
-  /* Range tints */
-  --range-lab: rgba(60, 48, 36, 0.06);
-  --range-optimal: rgba(189, 90, 56, 0.15);
+  /* Status (design system v1.3), measured against the optimal range.
+     Terracotta is chrome only and never marks a result. */
+  --ok: #3f7449; /* sage: in range. Only ever a soft tint, never a filled pill */
+  --ok-wash: rgba(63, 116, 73, 0.11);
+  --warn: #8a5a10; /* ochre: above range */
+  --alert: #8c1f2e; /* oxblood: below range */
+
+  /* Range levels: the strip track and the chart bands */
+  --range-optimal: rgba(63, 116, 73, 0.15);
+  --level-below: color-mix(in srgb, var(--alert) 24%, var(--surface));
+  --level-optimal: color-mix(in srgb, var(--ok) 32%, var(--surface));
+  --level-above: color-mix(in srgb, var(--warn) 28%, var(--surface));
 
   --shadow-card: 0 34px 60px -40px rgba(40, 30, 15, 0.45);
 
@@ -133,7 +141,6 @@ img {
   font-family: var(--mono);
   font-size: 10.5px;
   letter-spacing: 1px;
-  text-transform: uppercase;
   color: var(--muted);
 }
 
@@ -141,7 +148,6 @@ img {
   font-family: var(--mono);
   font-size: 11px;
   letter-spacing: 2.2px;
-  text-transform: uppercase;
   color: var(--muted);
   display: flex;
   align-items: center;
@@ -156,7 +162,7 @@ img {
   background: linear-gradient(
     90deg,
     rgba(60, 48, 36, 0.1) 0 30%,
-    rgba(189, 90, 56, 0.32) 30% 68%,
+    rgba(63, 116, 73, 0.3) 30% 68%,
     rgba(60, 48, 36, 0.1) 68% 100%
   );
   flex: none;
@@ -255,10 +261,8 @@ img {
   border-color: var(--warn);
 }
 .pill--ok {
-  background: transparent;
-  border-color: var(--border-soft);
-  color: var(--muted);
-  font-weight: 500;
+  background: var(--ok-wash);
+  color: var(--ok);
 }
 
 .icon-tile {
@@ -275,30 +279,38 @@ img {
   flex: none;
 }
 
-/* Logo lockup, per the design system: the mark is 1.875 × the wordmark's
+/* Logo lockup, per design system v1.3: the mark is 1.62 × the wordmark's
    font size and sits 0.24 × its own height from the name. Set --m to resize. */
 .lockup {
-  --m: 30px;
+  --m: 40px;
   display: inline-flex;
   align-items: center;
   gap: calc(var(--m) * 0.24);
 }
 .lockup .brand-mark {
-  width: 40px;
-  height: 40px;
+  width: var(--m);
+  height: var(--m);
 }
 .wordmark {
-  font-family: var(--mono);
+  font-family: var(--serif);
+  font-variation-settings: 'opsz' 36;
   font-weight: 500;
-  font-size: 22px;
-  letter-spacing: -0.02em;
+  font-size: calc(var(--m) / 1.62);
+  letter-spacing: -0.018em;
   line-height: 1;
   color: var(--ink);
-  padding-bottom: calc(var(--m) * 0.04);
+  /* Optical centring on the mark. With line-height 1, Newsreader's letters
+     (ascender top to descender bottom, and the x-height too) sit 0.025em above
+     the middle of the text box, so nudge them down by that much. In em, so it
+     holds at every lockup size. */
+  transform: translateY(0.025em);
 }
+/* "biomark" roman in ink, "hq" italic in the deeper terracotta that the
+   mark's last column lands on. */
 .wordmark b {
   font-weight: inherit;
-  color: var(--accent-em);
+  font-style: italic;
+  color: var(--accent);
 }
 
 /* The mark alone as a chat avatar, carried on its paper ground. */

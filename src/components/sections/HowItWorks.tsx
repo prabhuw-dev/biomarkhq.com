@@ -2,6 +2,7 @@ import type { ReactNode } from 'react'
 import uploadImg from '../../assets/images/step-upload.jpg'
 import syncImg from '../../assets/images/step-sync.jpg'
 import protocolImg from '../../assets/images/step-protocol.jpg'
+import { RangeStrip } from '../RangeStrip'
 
 type StepProps = {
   n: number
@@ -102,10 +103,7 @@ function OneViewVisual() {
       </div>
       <div className="week-row">
         <span className="week-row__name">Ferritin</span>
-        <span className="track">
-          <span className="track__band" style={{ left: '17%', right: '50%', background: 'rgba(189,90,56,.24)' }} />
-          <span className="track__tick" style={{ left: '5%', background: 'var(--alert)' }} />
-        </span>
+        <RangeStrip optimal={[17, 50]} position={5} status="alert" />
         <span className="mono week-row__value">18 ng/mL</span>
       </div>
       <div className="week-row">
@@ -153,12 +151,12 @@ export function HowItWorks() {
     <section id="how" className="how">
       <div className="container how__inner">
         <div className="section-intro">
-          <p className="eyebrow">How it works</p>
+          <p className="eyebrow">HOW IT WORKS</p>
           <h2 className="section-title">
             Everything your body tells you, <em>in one place.</em>
           </h2>
           <p className="section-lede">
-            Your lab reports live in one inbox, your sleep in another app, your runs somewhere else. BiomarkHQ gathers
+            Your lab reports live in one inbox, your sleep in another app, your runs somewhere else. Biomarkhq gathers
             them so you finally see the full picture.
           </p>
         </div>
@@ -186,7 +184,7 @@ export function HowItWorks() {
           <Step
             n={4}
             title="Get your protocol"
-            body="BiomarkHQ builds a personalised protocol from your data, with practical steps across nutrition, sleep, training and lifestyle."
+            body="Biomarkhq builds a personalised protocol from your data, with practical steps across nutrition, sleep, training and lifestyle."
             visual={<ProtocolVisual />}
           />
         </div>

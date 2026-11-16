@@ -11,7 +11,7 @@ export function ClosingCta() {
           <h2 className="cta__title">
             Start understanding your body, <em>not just measuring it.</em>
           </h2>
-          <p className="section-lede cta__lede">Join the waitlist and be among the first to try BiomarkHQ.</p>
+          <p className="section-lede cta__lede">Join the waitlist and be among the first to try biomarkhq.</p>
           <WaitlistForm centered note="No spam. We'll only email you when your access is ready." />
         </div>
       </div>

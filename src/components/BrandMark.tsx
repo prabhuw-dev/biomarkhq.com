@@ -34,7 +34,7 @@ export function BrandLockup() {
       <span className="wordmark" aria-hidden="true">
         biomark<b>hq</b>
       </span>
-      <span className="sr-only">BiomarkHQ</span>
+      <span className="sr-only">biomarkhq</span>
     </span>
   )
 }

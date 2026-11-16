@@ -29,11 +29,11 @@ const CONVERSATIONS = [
 const FAQS = [
   {
     q: 'Is this medical advice?',
-    a: "No. BiomarkHQ explains your data and suggests lifestyle steps. It doesn't diagnose or prescribe, and it suggests talking to a doctor when a result needs one.",
+    a: "No. Biomarkhq explains your data and suggests lifestyle steps. It doesn't diagnose or prescribe, and it suggests talking to a doctor when a result needs one.",
   },
   {
     q: "Isn't this just another AI chatbot?",
-    a: 'A general chatbot only knows what you type into it. BiomarkHQ answers from your own results, history and training, so every answer is about you.',
+    a: 'A general chatbot only knows what you type into it. Biomarkhq answers from your own results, history and training, so every answer is about you.',
   },
 ]
 
@@ -79,7 +79,7 @@ export function AskBiomarkHQ() {
       <div className="container ask__inner">
         <div className="ask__column">
           <div>
-            <p className="eyebrow">Ask BiomarkHQ</p>
+            <p className="eyebrow">ASK BIOMARKHQ</p>
             <h2 className="section-title">
               Ask anything about <em>your own results.</em>
             </h2>
@@ -111,7 +111,7 @@ export function AskBiomarkHQ() {
                 </span>
                 <div className="bubble-ai__body">
                   {phase === 2 ? (
-                    <span className="dots" aria-label="BiomarkHQ is typing">
+                    <span className="dots" aria-label="biomarkhq is typing">
                       <i />
                       <i />
                       <i />
