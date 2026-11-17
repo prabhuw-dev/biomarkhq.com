@@ -27,6 +27,8 @@
   --accent-hover: #9a4226;
   --accent-em: #bd5a38;
   --accent-light: #ef9d62;
+  --accent-dim: rgba(189, 90, 56, 0.5);
+  --accent-wash: rgba(189, 90, 56, 0.09);
 
   /* Status (design system v1.3), measured against the optimal range.
      Terracotta is chrome only and never marks a result. */
