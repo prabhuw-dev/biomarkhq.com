@@ -10,6 +10,7 @@ import { Privacy } from './components/sections/Privacy'
 import { AskBiomarkHQ } from './components/sections/AskBiomarkHQ'
 import { ClosingCta } from './components/sections/ClosingCta'
 import { SiteFooter } from './components/sections/SiteFooter'
+import { ChatWidget } from './components/ChatWidget'
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <ClosingCta />
       </main>
       <SiteFooter />
+      <ChatWidget />
     </>
   )
 }

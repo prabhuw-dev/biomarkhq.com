@@ -2,7 +2,7 @@ export function SiteFooter() {
   return (
     <footer className="container site-footer">
       <p className="site-footer__disclaimer">
-        Biomarkhq provides educational insights and is not a substitute for professional medical advice, diagnosis or
+        biomarkhq provides educational insights and is not a substitute for professional medical advice, diagnosis or
         treatment. Always talk to a qualified healthcare provider about your results.
       </p>
       <div className="site-footer__bar">
